@@ -142,6 +142,10 @@ class ScoutNinja(Ninja):
     def perform_task(self):
         print("Scouting the area")
 
+class OtherNinja(Ninja):
+    def random_task(self):
+        pass
+
 def assign_task(ninja):
     ninja.perform_task()
 
@@ -149,8 +153,10 @@ def assign_task(ninja):
 sakura = MedicalNinja()
 naruto = CombatNinja()
 kakashi = ScoutNinja()
+other = OtherNinja()
 
 # 分配任务
 assign_task(sakura)  # 输出: Healing teammates.
 assign_task(naruto)  # 输出: Fighting enemies.
 assign_task(kakashi)  # 输出: Scouting the area.
+assign_task(other)  # 输出: Perform a generic task
